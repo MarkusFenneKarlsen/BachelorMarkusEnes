@@ -1,9 +1,4 @@
-#     I   J   K   L   M   N   O   P    Q
-from xml.dom.minicompat import NodeList
-
-
-
-
+import math
 class SampleGraph:
     def __init__(self,Nodes,A,Terminals):
         self.Nodes = Nodes
@@ -21,10 +16,15 @@ def generate_graph() -> SampleGraph:
      [10, 10, 0,  0,  0,  0,  4,  0,   8], #P
      [0,  0,  8,  0,  0,  0,  9,  8,   0]] #Q
 
-    for i in range(ord("I"),ord("Q")):
-        print(i)
-
+    #MATLAB includes the last integer in the range while python doesn't
+    #Therefore we include "+1" 
+    nodes = []
+    for i in range(ord("I"),ord("Q")+1):
+        nodes.append(chr(i))
+    terminals = ['I','K','M','N']
+    return SampleGraph(nodes, A, terminals)
 
 if __name__ == "__main__":
-    generate_graph()
+    graph = generate_graph()
+    print(graph.Terminals)
     
