@@ -28,7 +28,8 @@ edgesOfMST = size(MST, 1);
 A2 = zeros(size(G.A));
 
 for i = 1:edgesOfMST
-    A2(MST(i,1), MST(i,2)) = MST(i,3); A2(MST(i,2), MST(i,1)) = MST(i,3);
+    A2(MST(i,1), MST(i,2)) = MST(i,3); 
+    A2(MST(i,2), MST(i,1)) = MST(i,3);
 end
 
 Iterations_Complete = false;

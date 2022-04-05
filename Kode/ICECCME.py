@@ -5,6 +5,8 @@ from steiner_tree import steiner_tree;
 if __name__ == "__main__":
     graph = generate_graph()
     mst,sizeofA = prims_modifed(graph)
+    print(mst.A)
     steiner = steiner_tree(mst,sizeofA)
+    print(steiner)
 
 

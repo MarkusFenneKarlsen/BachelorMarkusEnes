@@ -50,4 +50,4 @@ def prims_modifed(graph):
             MST = [u,v,minWeight]
 
             
-    return SampleGraph(nodes, MST, T) , len(A)
+    return SampleGraph(nodes, MST, T) , np.size(A, axis=1)
