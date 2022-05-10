@@ -45,9 +45,7 @@ def prims_modifed(graph):
         tree_vertices.append(v)
         #nodes[v].pi = u ##Unsure of application for this line
         if len(MST) != 0:
-            MST = np.column_stack((MST, [u,v,minWeight]))
+            MST = np.row_stack((MST, [u,v,minWeight]))
         else:
             MST = [u,v,minWeight]
-
-            
     return SampleGraph(nodes, MST, T) , np.size(A, axis=1)
