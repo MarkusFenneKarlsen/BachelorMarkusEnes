@@ -7,11 +7,12 @@ def steiner_print(Steiner):
     A2 = Steiner.A
     print(' ')
     print("Printing the edges of Steiner tree ...")
+    print(f"Terminal nodes: {Steiner.Terminals}")
     for i in range(len(Steiner.Nodes)-1):
-        for j in range(1,len(Steiner.Nodes)):
+        for j in range(i+1,len(Steiner.Nodes)):
             if A2[i][j]: 
                 wt = A2[i][j]
-                print(f"Edge-{i+1}:{Steiner.Nodes[i]}-{Steiner.Nodes[j]}    Wt: {wt}")
+                print(f"Edge-{i}:{Steiner.Nodes[i]}-{Steiner.Nodes[j]}    Wt: {wt}")
                 TotalWT += wt
 
            

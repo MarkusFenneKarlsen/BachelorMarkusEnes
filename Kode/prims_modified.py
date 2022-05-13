@@ -1,5 +1,6 @@
 import numpy as np;
 from sample_graph import SampleGraph;
+import sys;
 
 def prims_modifed(graph):
     A = graph.A
@@ -13,14 +14,14 @@ def prims_modifed(graph):
     #MATLAB matrix strats at 1, while python matrix starts at 0
     for i in range(0,m):
         for j in range(0,n):
-            if not A[i][j]: A[i][j] = np.inf
+            if not A[i][j]: A[i][j] = sys.maxsize
     No_of_vertices = len(nodes)
-    tree_vertices = [1]
+    tree_vertices = [0]
     MST = []
 
     #add one vertice at a time to "tree_verices"
     while len(tree_vertices) < No_of_vertices:
-        minWeight = np.Inf
+        minWeight = sys.maxsize
         #from all the vertices in the tree, search for minimum edge
         for i in range(len(tree_vertices)):
             minU = tree_vertices[i]
@@ -28,23 +29,22 @@ def prims_modifed(graph):
             #use for loop instead
             minwt = A[minU][0]
             minV = 0
-            
             for i,el in enumerate(A[minU][:]):
                 if el < minwt:
                     minwt = el
-                    minV = i
-                    
-
+                    minV = i       
             if minwt < minWeight and not np.isin(minV, tree_vertices):
                 minWeight = minwt
                 v = minV 
                 u = minU
         #when a minimum is found 
-        A[u][v] = np.inf
-        A[v][u] = np.inf #mark edges as visited
+        A[u][v] = sys.maxsize
+        A[v][u] = sys.maxsize #mark edge as visited
         tree_vertices.append(v)
         #nodes[v].pi = u ##Unsure of application for this line
-        if len(MST) != 0:
+        if minWeight == sys.maxsize:
+            continue
+        elif len(MST) != 0:
             MST = np.row_stack((MST, [u,v,minWeight]))
         else:
             MST = [u,v,minWeight]

@@ -4,7 +4,7 @@ from sample_graph import SampleGraph;
 def mst_print(MST):
     print("Printing the MST with the vertices and edges:")
     TotalWT = 0
-    for i in range(len(MST.Nodes)-1):
+    for i in range(len(MST.A)):
         mst = MST.A[:][i]
         u = mst[0]
         v = mst[1]

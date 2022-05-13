@@ -23,7 +23,7 @@ end
 
 G.terminal_indices = terminal_indices;
 
-MST = G.MST;
+MST = G.MST;terminal_indices
 edgesOfMST = size(MST, 1);
 A2 = zeros(size(G.A));
 
