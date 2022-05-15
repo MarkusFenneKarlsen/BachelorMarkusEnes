@@ -1,25 +1,14 @@
-# BachelorMarkusEnes
+# Bachelor Thesis project by Markus & Enes
 
+This is the source code for our bachelor thesis project.
 
+You may download this whole repo as a zip file, extract it and then compile it. ICECCME.py is the file that runs the Jaiswal & Davidrajuh's algorithm.
 
-
-
-
-
-
+Depending on what kind of enviroment you run the Python code in, you might have to type something like this in the console:
 pip3 install numpy
 
+This project uses NumPy as a good matrix library for Python, in order to get access to much of the 
+same default functionality as MATLAB.
 
-using numpy as a good matrix library for python, in order to get access to much of the 
-same default functionality of as MATLAB.
-
-///////////////
-COMMENTS:
-
-Trenger vi bruke debug mode? 
-MATLAB koden lager en "index_terminals" variabel som ikke brukes noen plass, hvorfor? 
-"tree_vertice" er en variabel, men den kalles med å bruke length(tree_vertice), hvorfor?
-Masse unødvendige variabellagringer som ikke har en god grunn
-///////////////
-
+More info about NumPy:
 https://numpy.org/doc/stable/user/numpy-for-matlab-users.html
