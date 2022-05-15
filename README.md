@@ -1,6 +1,6 @@
 # Bachelor Thesis project by Markus & Enes
 
-This is the source code for our bachelor thesis project.
+This is the source code for our bachelor thesis project. The "Ressurser" directory are the resources provided to us from Reggie Davidrajuh and is NOT our work. Our implementation of the Jaiswal & Davidrajuh's algorithm and the rest of our Python code is in the directory "Kode".
 
 You may download this whole repo as a zip file, extract it and then compile it. ICECCME.py is the file that runs the Jaiswal & Davidrajuh's algorithm.
 
